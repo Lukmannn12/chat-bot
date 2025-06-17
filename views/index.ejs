@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot Gemini</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .chatbox { margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; }
+    input[type="text"] { width: 300px; padding: 10px; }
+    button { padding: 10px 15px; }
+  </style>
+</head>
+<body>
+  <h1>Chatbot AI dengan Gemini</h1>
+  <form action="/ask" method="POST">
+    <input type="text" name="question" placeholder="Tulis pertanyaan..." required>
+    <button type="submit">Tanya</button>
+  </form>
+
+  <% if (question && answer) { %>
+    <div class="chatbox">
+      <strong>Anda:</strong> <%= question %><br><br>
+      <strong>Gemini:</strong> <%= answer %>
+    </div>
+  <% } %>
+</body>
+</html>
